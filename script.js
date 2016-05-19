@@ -7,34 +7,70 @@ if(typeof(Storage) !== "undefined") {
     // Sorry! No Web Storage support..
 };
 
+var currentCall = null;
+
 document.addEventListener("DOMContentLoaded", function(e) {
 	console.log("DOM fully loaded and parsed")
 });
 
-document.getElementById('end').addEventListener('click', function(e) {
-	event.preventDefault();
-	console.log('The call has ended')
-});
-
 //Add an event listener for form submissions
-document.getElementById('start').addEventListener('click', function() {
-	event.preventDefault();
-	//Get the value of the number field
-	var number = document.getElementById('number').value;
-	//Save the number in localStorage
-	localStorage.setItem('number', number);
+document.getElementById('start').addEventListener('click', function(e) {
+	e.preventDefault();
+	startCall();
 });
 
-var d = new Date();
+document.getElementById('end').addEventListener('click', function(e) {
+	e.preventDefault();
+	endCall();
+});
 
-document.getElementById('start').addEventListener('click', function() {
-	event.preventDefault();
-	console.log(d);
-})
+function getCallDirection() {
 
-var phoneCalls = {
-	
 }
+
+function getCallNumber() {
+
+}
+
+function startCall() {
+	var d = new Date();
+	
+	console.log(currentCall);
+	currentCall = "Bananas";
+
+	//Get the value of the number field
+	// var number = document.getElementById('number').value;
+	// //Save the number in localStorage
+	// localStorage.setItem('number', number);
+}
+
+function endCall() {
+	var d = new Date();
+	console.log(currentCall);
+	// handle end of call and store data
+}
+
+function addCallToLog() {
+
+}
+
+// document.getElementById('start').addEventListener('click', function() {
+// 	event.preventDefault();
+// 	console.log(d);
+// })
+
+// function callDetails () {
+// 	event.preventDefault();
+// 	var phoneNumber = document.getElementById("number").value;
+// 	console.log('phoneNumber');
+// };
+
+//Code for getting the phone number value
+// var phoneNumber = document.getElementById("number").value;
+
+// //Code for getting the value of the drop down options
+// var selected = document.getElementById('callState');
+// var status = selected.options[selected.selectedIndex].value;
 
 
 
