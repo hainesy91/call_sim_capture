@@ -9,6 +9,13 @@ if(typeof(Storage) !== "undefined") {
 
 var currentCall = null;
 
+// Object should contain:
+// callDirection
+// callNumber
+// callStart (as ms)
+// callEnd (as ms)
+// callDuratioh (in ms, default 0)
+
 document.addEventListener("DOMContentLoaded", function(e) {
 	console.log("DOM fully loaded and parsed")
 });
@@ -24,12 +31,20 @@ document.getElementById('end').addEventListener('click', function(e) {
 	endCall();
 });
 
-function getCallDirection() {
+// Check to see if the new call is different
+function isNewCall() {
 
 }
 
-function getCallNumber() {
+function getCallDirection() {
+	event.preventDefault();
+	var selected = document.getElementById('callState');
+	var status = selected.options[selected.selectedIndex].value;
+	return status;
+}
 
+function getCallNumber() {
+	var phoneNumber = document.getElementById("number").value;
 }
 
 function startCall() {

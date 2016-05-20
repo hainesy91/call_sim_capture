@@ -2,3 +2,20 @@ h1 {
 	color: #29C9FF;
 	font-family: helvetica;
 }
+
+button#start {
+	border-radius: 22px;
+	background-color: #2CDB4F;
+	height: 40px;
+}
+
+button#end {
+	border-radius: 37px;
+    height: 40px;
+    background-color: #F71B1B;
+    padding: 10px;
+}
+ 
+button#start:hover {
+	background-color: red;
+}
