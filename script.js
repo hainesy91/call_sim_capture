@@ -5,9 +5,9 @@ document.addEventListener("DOMContentLoaded", function(e) {
 		onCallStateChange('start');
 	});
 
-	document.getElementById('end').addEventListener('click', function(e) {
+	document.getElementById('stop').addEventListener('click', function(e) {
 		e.preventDefault();
-		onCallStateChange('end');
+		onCallStateChange('stop');
 	});
 });
 
@@ -20,16 +20,21 @@ document.addEventListener("DOMContentLoaded", function(e) {
 var currentCall = null;
 
 //Variable that contains the status of the call state
-var callState = document.getElementById("callState").value;
+
 
 /**
-	callStateType: string: either incoming or outgoing
+	callStateType: string: either start or stop
 **/
 function onCallStateChange(callStateType) {
-	if (callState) === "outgoing" {
+	if (callStateType === "start") {
 
-	}
+	} 
 }
+
+//Function that checks if the value of current call
+function isCurrentCall() {
+	return (currentCall === null);
+};
 
 // Do something when a new call is started
 function startNewCall() {
