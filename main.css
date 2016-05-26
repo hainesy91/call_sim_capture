@@ -1,3 +1,5 @@
+@import url('animate.css');
+
 h1 {
 	color: #29C9FF;
 	font-family: helvetica;
@@ -5,7 +7,7 @@ h1 {
 
 button#start {
 	border-radius: 22px;
-	background-color: #2CDB4F;
+	background-color: #7EF71B;
 	height: 40px;
 }
 
@@ -14,8 +16,4 @@ button#end {
     height: 40px;
     background-color: #F71B1B;
     padding: 10px;
-}
- 
-button#start:hover {
-	background-color: red;
 }
