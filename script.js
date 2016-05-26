@@ -19,11 +19,16 @@ document.addEventListener("DOMContentLoaded", function(e) {
 // callDuratioh (in ms, default 0)
 var currentCall = null;
 
+//Variable that contains the status of the call state
+var callState = document.getElementById("callState").value;
+
 /**
 	callStateType: string: either incoming or outgoing
 **/
 function onCallStateChange(callStateType) {
+	if (callState) === "outgoing" {
 
+	}
 }
 
 // Do something when a new call is started
