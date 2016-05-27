@@ -27,16 +27,16 @@ var currentCall = null;
 **/
 function onCallStateChange(callStateType) {
 	if (callStateType === "start") {
-
+		currentCall.isCurrentCall()
 	} 
-}
+};
 
 //Function that checks if the value of current call
 function isCurrentCall() {
 	return (currentCall === null);
 };
 
-// Do something when a new call is started
+// Do something when a new call is started - update the status of the currentCall object
 function startNewCall() {
 
 }
